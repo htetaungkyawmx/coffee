@@ -1,0 +1,271 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #6b4226;
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 1em;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    transition: background 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: white;
+    color: #6b4226;
+}
+
+/* Footer */
+footer {
+    background-color: #6b4226;
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+    margin-top: 20px;
+}
+
+/* Hero Section (Home Page) */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    background: linear-gradient(to right, rgba(107, 66, 38, 0.9), rgba(107, 66, 38, 0.6)), url('images/coffee-shop.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+}
+
+/* Catalog Section (General) */
+.catalog {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.catalog .item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 30%;
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.catalog .item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.catalog img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.catalog h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5em;
+}
+
+.catalog p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Shopping Cart */
+.cart-summary {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 60%;
+    margin: auto;
+}
+
+.cart-summary p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.cart-summary p span {
+    font-weight: bold;
+}
+
+.cart-summary button {
+    background-color: #6b4226;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cart-summary button:hover {
+    background-color: #502e1f;
+}
+
+/* Events Form */
+form {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #6b4226;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background-color: #502e1f;
+}
+
+/* Special Offers */
+.subscription {
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.subscription h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.subscription p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.subscription button {
+    background-color: #6b4226;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.subscription button:hover {
+    background-color: #502e1f;
+}
+
+/* Search Animation */
+.search-bar {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.search-bar input:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(107, 66, 38, 0.5);
+    border-color: #6b4226;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .catalog .item {
+        width: 100%;
+    }
+
+    .cart-summary {
+        width: 90%;
+    }
+}
