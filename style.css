@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+/* Body styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -25,7 +26,7 @@ header h1 {
     font-size: 2rem;
 }
 
-nav ul {
+header nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
@@ -33,11 +34,11 @@ nav ul {
     padding: 0;
 }
 
-nav ul li {
+header nav ul li {
     margin: 0 15px;
 }
 
-nav ul li a {
+header nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -46,44 +47,37 @@ nav ul li a {
     border-radius: 5px;
 }
 
-nav ul li a:hover {
+header nav ul li a:hover {
     background-color: white;
     color: #6b4226;
 }
 
-/* Hero Section */
+/* Hero section */
 .hero {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2em 0;
-    background-color: #f9f9f9;
-    margin: 20px auto;
-    border-radius: 10px;
-    max-width: 1200px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #eceff1;
+    padding: 2rem;
 }
 
 .hero-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 20px;
+    gap: 2rem;
 }
 
 .hero-image {
-    max-width: 50%;
+    max-width: 400px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.hero-text {    
+/* .hero-text {    
     max-width: 45%;
     text-align: left;
-}
+} */
 
 .hero-text h2 {
     font-size: 2.5rem;
@@ -92,9 +86,167 @@ nav ul li a:hover {
 }
 
 .hero-text p {
+    margin-top: 1rem;
     font-size: 1.2rem;
     color: black;
 }                               
+
+/* Slideshow */
+.slideshow {
+    margin: 2rem 0;
+    overflow: hidden;
+}
+
+.slideshow .wrapper {
+    display: flex;
+    animation: slide 5s infinite;
+}
+
+.slideshow img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+}
+
+/* Catalog and item styling */
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.item {
+    background-color: white;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.item img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.item h3 {
+    color: #3e2723;
+}
+
+.quantity-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.quantity-controls button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #3e2723;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.quantity-controls button:hover {
+    background-color: #5d4037;
+}
+
+.quantity-controls input {
+    width: 50px;
+    text-align: center;
+    font-size: 1rem;
+    margin: 0 0.5rem;
+}
+
+.action-buttons button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.action-buttons .save {
+    background-color: #4caf50;
+    color: white;
+}
+
+.action-buttons .save:hover {
+    background-color: #45a049;
+}
+
+.action-buttons .cancel {
+    background-color: #f44336;
+    color: white;
+}
+
+.action-buttons .cancel:hover {
+    background-color: #e53935;
+}
+
+/* Events page */
+.events-list .event {
+    background-color: white;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.events-list .event h3 {
+    color: #3e2723;
+}
+
+/* Special offers section */
+.special-offers {
+    background-color: #ffe082;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.special-offers h2 {
+    color: #3e2723;
+}
+
+.special-offers .offer-image {
+    max-width: 100%;
+    margin: 1rem 0;
+    border-radius: 10px;
+}
+
+.special-offers .offer-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #3e2723;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.special-offers .offer-link:hover {
+    background-color: #5d4037;
+}
 
 /* Footer */
 footer {
