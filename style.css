@@ -512,6 +512,7 @@ main
     padding: 20px;
     border-radius: 8px;
     flex: 2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
 }
 .Subscription
 {
@@ -539,7 +540,7 @@ button
 }
 button:hover
 {
-    color: gainsboro;
+    color: green;
 }
 
 
@@ -553,7 +554,14 @@ button:hover
         flex-direction: column;
         text-align: center;
     }
-
+    .Offers
+    {
+        flex-direction: column;
+    }
+    .sublevel
+    {
+        flex-direction: column;
+    }
     .hero-image {
         max-width: 80%;
     }
