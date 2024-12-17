@@ -357,41 +357,81 @@ footer {
 }
 
 /* Shopping Cart */
-.cart-summary {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 60%;
+.container {
+    width: 90%; /* Make it responsive */
+    max-width: 800px;
     margin: auto;
-}
-
-.cart-summary p {
+  }
+  
+  .cartcol1 {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    font-size: 1rem;
-}
-
-.cart-summary p span {
-    font-weight: bold;
-}
-
-.cart-summary button {
-    background-color: #6b4226;
+    flex-wrap: wrap; /* Handle smaller screens */
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    background-color: chocolate;
+    border-radius: 10px; /* Add rounded corners */
+    overflow: hidden; /* Ensure content stays inside */
+  }
+  
+  .cartcol1 img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover; /* Maintain aspect ratio */
+  }
+  
+  .cartcol2 {
+    padding: 20px;
+    flex: 1; /* Allow flexibility for the column */
+    color: white; /* Ensure readability on darkred */
+  }
+  
+  .cartcol3 {
+    padding: 20px;
+    flex: 1;
+    min-height: 250px;
+  }
+  
+  .cartcol3 hr {
+    margin: 20px 0; /* Balanced spacing */
+  }
+  
+  .main {
+    display: flex;
+    flex-wrap: wrap; /* Allow content to adjust for smaller screens */
+    gap: 20px; /* Add spacing between items */
+  }
+  
+  .releventimg,
+  .releventext {
+    width: 100%;
+    max-width: 600px;
+    margin: auto; /* Center content */
+  }
+  
+  .releventimg img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Smooth edges */
+  }
+  
+  .button {
+    color: chocolate;
+    text-decoration: none;
+    padding: 10px 20px; /* Adjust for better aesthetics */
+    border: 2px solid black; /* Fixed typo '2ps' */
+    border-radius: 20px;
+    display: inline-block; /* Ensure proper button styling */
+    text-align: center;
+    transition: background 0.3s, color 0.3s; /* Smooth hover effect */
+  }
+  
+  .button:hover {
+    background: black;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.cart-summary button:hover {
-    background-color: #502e1f;
-}
-
+  }
+  
 /* Events Form */
 form {
     background-color: white;
