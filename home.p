@@ -1,0 +1,63 @@
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return """
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home | Bean Boutique Coffee</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Bean Boutique Coffee</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="coffee-selection.html">Coffee Selection</a></li>
+                    <li><a href="brewing-equipment.html">Brewing Equipment</a></li>
+                    <li><a href="shopping-cart.html">Shopping Cart</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="special-offers.html">Special Offers</a></li>
+                    <li><a href="Level.html">Level</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <img src="images/coffee-shop.jpg" alt="Coffee Shop" class="hero-image">
+                    <div class="hero-text">
+                        <h2>Welcome to Bean Boutique Coffee</h2>
+                        <p>Discover our unique blends, brewing equipment, and exciting events.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slideshow -->
+            <div class="slideshow">
+                <div class="wrapper">
+                    <img src="images/Cappuccino.webp" alt="Cappuccino">
+                    <img src="images/espresso.jpg" alt="Espresso">
+                    <img src="images/latte.avif" alt="Latte">
+                    <img src="images/love.png" alt="Coffee Love">
+                    <img src="images/Cappuccino.webp" alt="Cappuccino">
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Bean Boutique Coffee. All rights reserved.</p>
+        </footer>
+    </body>
+    </html>
+    """
+
+if __name__ == "__main__":
+    app.run(debug=True)
