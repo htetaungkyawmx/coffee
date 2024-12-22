@@ -109,7 +109,7 @@ header nav ul li a:hover {
     50% { transform: translateX(-200%); }
     75% { transform: translateX(-300%); }
     100% { transform: translateX(0); }
-}
+} 
 
 /* Catalog and item styling */
 .catalog {
@@ -583,24 +583,62 @@ button:hover
     color: green;
 }
 
-/* 상황에 맞는 메뉴 있음 */
-.plugin
-{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	height: 80vh;
-	gap: 20px;
+/* Plugin Section */
+.plugin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
 }
-.map,.youtube
-{
-	width: 600px;
+
+.plugin .map iframe,
+.plugin .youtube iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.map iframe, .youtube iframe
-{
-	width: 100%;
-	height: 300px;
+
+.plugin .map, 
+.plugin .youtube {
+    flex: 1;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: chocolate;
+    color: #fff;
+    padding: 20px 10px;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links h4 {
+    margin: 10px 0;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #f39c12;
 }
 
 /* Responsive Design */
