@@ -431,6 +431,76 @@ footer {
     background: black;
     color: white;
   }
+
+/* Featured Coffee Section */
+.featured-coffee {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.featured-coffee h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Coffee Items Container */
+.coffee-items {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Coffee Item Style */
+.coffee-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.coffee-item:hover {
+    transform: scale(1.05);
+}
+
+/* Coffee Image */
+.coffee-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Coffee Item Title */
+.coffee-item h3 {
+    font-size: 1.8rem;
+    margin: 10px 0;
+    color: #444;
+}
+
+/* Coffee Item Description */
+.coffee-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .coffee-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coffee-item {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
   
 /* Events Form */
 form {
@@ -639,6 +709,23 @@ footer {
 
 .footer-links ul li a:hover {
     color: #f39c12;
+}
+
+/* Add this to style the icons */
+.social-media li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.social-media a {
+    font-size: 24px; /* Adjust the size */
+    color: #333; /* Default color */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.social-media a:hover {
+    color: #f4a261; /* Hover color */
 }
 
 /* Responsive Design */
