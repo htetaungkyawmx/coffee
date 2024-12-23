@@ -417,7 +417,7 @@ footer {
   }
   
   .button {
-    color: chocolate;
+    color: black;
     text-decoration: none;
     padding: 10px 20px; /* Adjust for better aesthetics */
     border: 2px solid black; /* Fixed typo '2ps' */
@@ -527,7 +527,7 @@ form input, form button {
 }
 
 form button {
-    background-color: #6b4226;
+    background-color: greenyellow;
     color: white;
     border: none;
     font-size: 1rem;
@@ -536,7 +536,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #502e1f;
+    background-color: white;
 }
 
 /* Special Offers */
