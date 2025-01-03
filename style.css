@@ -211,7 +211,7 @@ header nav ul li a:hover {
 
 /* Special offers section */
 .special-offers {
-    background-color: #ffe082;
+    background-color: #ffe082; /* Soft yellow background */
     padding: 2rem;
     text-align: center;
     border-radius: 8px;
@@ -219,7 +219,8 @@ header nav ul li a:hover {
 }
 
 .special-offers h2 {
-    color: #3e2723;
+    color: #3e2723; /* Deep brown for the header */
+    font-size: 2em;
 }
 
 .special-offers .offer-image {
@@ -232,7 +233,7 @@ header nav ul li a:hover {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
-    background-color: #3e2723;
+    background-color: #3e2723; /* Dark brown background for links */
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -240,7 +241,66 @@ header nav ul li a:hover {
 }
 
 .special-offers .offer-link:hover {
-    background-color: #5d4037;
+    background-color: #5d4037; /* Lighter brown on hover */
+}
+
+/* New UI */
+.special-offers-new {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.offer-new {
+    background-color: #fff; /* White background for the offer cards */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid #ddd; /* Light border around each offer */
+}
+
+.offer-new:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.offer-new img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    object-fit: cover; /* Ensure image fits correctly without distortion */
+}
+
+.offer-new h3 {
+    font-size: 1.6em;
+    color: #3e2723; /* Deep brown text for headings */
+    margin-bottom: 10px;
+}
+
+.offer-new p {
+    font-size: 1.1em;
+    color: #666; /* Soft gray for descriptions */
+    margin-bottom: 15px;
+}
+
+.offer-new .offer-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #3e2723; /* Dark brown for buttons */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.offer-new .offer-link:hover {
+    background-color: #5d4037; /* Lighter brown for hover state */
 }
 
 /* Footer */
@@ -727,6 +787,7 @@ footer {
 .social-media a:hover {
     color: #f4a261; /* Hover color */
 }
+
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
