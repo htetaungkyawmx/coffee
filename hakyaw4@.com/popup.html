@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup:target .popup-container {
+            display: flex;
+        }
+
+        .popup-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 300px;
+        }
+
+        .popup-content h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .popup-content p {
+            margin: 10px 0 20px;
+            color: #333;
+        }
+
+        .close-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .close-btn:hover {
+            background: #0056b3;
+        }
+
+        .open-popup {
+            text-decoration: none;
+            padding: 10px 20px;
+            background: #28a745;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .open-popup:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <a href="#popup" class="open-popup">Open Popup</a>
+
+    <div id="popup" class="popup">
+        <div class="popup-container">
+            <div class="popup-content">
+                <h2>Popup Title</h2>
+                <p>This is a popup without JavaScript!</p>
+                <a href="#" class="close-btn">Close</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
