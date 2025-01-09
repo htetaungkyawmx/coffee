@@ -59,6 +59,8 @@ header nav ul li a:hover {
     justify-content: center;
     background-color: #eceff1;
     padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .hero-content {
@@ -78,29 +80,34 @@ header nav ul li a:hover {
     font-size: 2.5rem;
     margin-bottom: 0.5em;
     color: chocolate;
+    font-family: Arial, sans-serif;
 }
 
 .hero-text p {
     margin-top: 1rem;
     font-size: 1.2rem;
     color: black;
+    line-height: 1.5;
 }                               
 
 /* Slideshow */
 .slideshow {
     margin: 2rem 0;
     overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .slideshow .wrapper {
     display: flex;
-    animation: slide 5s infinite;
+    animation: slide 10s infinite;
 }
 
 .slideshow img {
     width: 100%;
     max-height: 300px;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 @keyframes slide {
@@ -109,7 +116,45 @@ header nav ul li a:hover {
     50% { transform: translateX(-200%); }
     75% { transform: translateX(-300%); }
     100% { transform: translateX(0); }
-} 
+}
+
+/* Popup */
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #703D38;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: #fff;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 0.2s;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+.popup .close:hover {
+    color: #927449; 
+}
+
+.popup .content {
+    max-height: 30%;
+    overflow: auto;
+    color: #fff;
+}
 
 /* Catalog and item styling */
 .catalog {
@@ -128,6 +173,12 @@ header nav ul li a:hover {
     text-align: center;
     width: 300px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 .item img {
@@ -140,6 +191,7 @@ header nav ul li a:hover {
     color: #3e2723;
 }
 
+/* Quantity controls */
 .quantity-controls {
     display: flex;
     justify-content: center;
@@ -168,6 +220,7 @@ header nav ul li a:hover {
     margin: 0 0.5rem;
 }
 
+/* Action buttons */
 .action-buttons button {
     padding: 0.5rem 1rem;
     font-size: 1rem;
