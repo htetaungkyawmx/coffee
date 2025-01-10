@@ -7,47 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome for social media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* Popup Styles */
-        .popup {
-            margin: 70px auto;
-            padding: 20px;
-            background: #703D38;
-            border-radius: 5px;
-            width: 30%;
-            position: relative;
-            transition: all 0.5s ease-in-out;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            display: none; /* Initially hidden */
-        }
-
-        .popup h2 {
-            margin-top: 0;
-            color: #fff;
-        }
-
-        .popup .close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            font-size: 30px;
-            font-weight: bold;
-            text-decoration: none;
-            color: #fff;
-            cursor: pointer;
-            transition: color 0.2s;
-        }
-
-        .popup .close:hover {
-            color: #927449;
-        }
-
-        .popup .content {
-            max-height: 30%;
-            overflow: auto;
-            color: #fff;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -100,8 +59,8 @@
         <!-- Featured Coffee Section -->
         <section class="featured-coffee">
             <h2>Experience the Best Coffee in Town</h2>
-            <p>At Bean Boutique Coffee, we serve freshly brewed coffee made from the finest beans. Come and enjoy a cup of coffee in a cozy atmosphere.</p>
-            <a href="#popup" class="button">Get 30% Off</a>
+            <p>Freshly brewed coffee made from the finest beans. Visit us for a cozy coffee experience.</p>
+            <button onclick="togglePopup()" class="button">Get 30% Off</button>
             <div class="coffee-items">
                 <div class="coffee-item">
                     <img src="images/Cappuccino.webp" alt="Cappuccino">
@@ -120,7 +79,7 @@
                 </div>
             </div>
         </section>
-
+        
         <!-- Upcoming Events Section -->
         <section class="events">
             <h2>Upcoming Events</h2>
@@ -160,7 +119,7 @@
         <div id="popup" class="popup">
             <a href="#" class="close">&times;</a>
             <h2>Exclusive Offer!</h2>
-            <p>Get 20% off your next purchase at Bean Boutique Coffee. Enjoy the finest coffee blends today!</p>
+            <p>Get 30% off your next purchase at Bean Boutique Coffee. Enjoy the finest coffee blends today!</p>
         </div>
     </main>
 
@@ -174,6 +133,21 @@
                 <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
             </ul>
         </div>
-    </footer>    
+    </footer>   
+    
+     <!-- Popup -->
+     <div id="popup" class="popup" role="dialog" aria-labelledby="popup-title">
+        <button class="close" onclick="togglePopup()">&times;</button>
+        <h2 id="popup-title">Exclusive Offer!</h2>
+        <p>Get 30% off your next purchase at Bean Boutique Coffee. Enjoy the finest blends today!</p>
+    </div>
+
+    <script>
+        function togglePopup() {
+            const popup = document.getElementById('popup');
+            popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+
 </body>
 </html>

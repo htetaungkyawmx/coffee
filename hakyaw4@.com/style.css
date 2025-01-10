@@ -118,82 +118,47 @@ header nav ul li a:hover {
     100% { transform: translateX(0); }
 }
 
-/* Popup */
-/* .popup {
-    margin: 70px auto;
+  /* Popup Styles */
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: chocolate;
+    color: #fff;
     padding: 20px;
-    background: #703D38;
-    border-radius: 5px;
-    width: 30%;
-    position: relative;
-    transition: all 0.5s ease-in-out;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: none;
 }
 
 .popup h2 {
-    margin-top: 0;
-    color: #fff;
+    margin: 0 0 10px;
 }
 
 .popup .close {
     position: absolute;
-    top: 20px;
-    right: 30px;
-    transition: all 0.2s;
-    font-size: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #fff;
-}
-
-.popup .close:hover {
-    color: #927449; 
-}
-
-.popup .content {
-    max-height: 30%;
-    overflow: auto;
-    color: #fff;
-} */
-
-/* Popup Styles */
-.popup {
-    margin: 70px auto;
-    padding: 20px;
-    background: #703D38;
-    border-radius: 5px;
-    width: 30%;
-    position: relative;
-    transition: all 0.5s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    display: none; /* Initially hidden */
-}
-
-.popup h2 {
-    margin-top: 0;
-    color: #fff;
-}
-
-.popup .close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #fff;
+    top: 10px;
+    right: 20px;
+    font-size: 20px;
     cursor: pointer;
-    transition: color 0.2s;
-}
-
-.popup .close:hover {
-    color: #927449;
-}
-
-.popup .content {
-    max-height: 30%;
-    overflow: auto;
+    background: none;
+    border: none;
     color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .coffee-items {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
 }
 
 /* Catalog and item styling */
