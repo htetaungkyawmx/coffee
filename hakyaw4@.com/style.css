@@ -283,7 +283,7 @@ header nav ul li a:hover {
 
 .special-offers-new {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -293,6 +293,7 @@ header nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: calc(33.333% - 20px); /* Adjust width for 3 per row */
+    max-width: 300px; /* Ensure cards don't grow too large */
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
@@ -307,19 +308,32 @@ header nav ul li a:hover {
 }
 
 .offer-new h3 {
-    font-size: 1.6em;
+    font-size: 1.4em;
     color: #3e2723; /* Deep brown text for headings */
     margin-bottom: 10px;
 }
 
 .offer-new p {
-    font-size: 1.1em;
+    font-size: 1em;
     color: #666; /* Soft gray for descriptions */
     margin-bottom: 15px;
 }
 
 .offer-new:hover {
     transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .offer-new {
+        width: calc(50% - 20px); /* Adjust to 2 per row for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .offer-new {
+        width: 100%; /* Stack offers for smaller screens */
+    }
 }
 
 /* Footer */
