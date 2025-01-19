@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events | Bean Boutique Coffee</title>
     <link rel="stylesheet" href="style.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -21,7 +21,7 @@
                     <a href="shopping-cart.html">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </a>
-                </li>  
+                </li>
                 <li>
                     <div class="search-bar">
                         <input type="text" placeholder="Search...">
@@ -29,7 +29,7 @@
                             <i class="fa fa-search"></i>
                         </button>
                     </div>
-                </li>  
+                </li>
             </ul>
         </nav>
     </header>
@@ -57,7 +57,24 @@
             <div class="offer">
                 <img src="images/browse.png" alt="Special Offer - 50% Off" class="offer-image">
                 <p>Don't miss out on our limited-time special offer! Enjoy 50% off on selected brewing equipment and coffee blends.</p>
-                <a href="special-offers.html" class="offer-link">Explore Offers</a>
+
+                <!-- Explore Offers Section with Form -->
+                <details>
+                    <summary>Explore Offers</summary>
+                    <form>
+                        <h2>Special Offer Inquiry Form</h2>
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                        <label for="offer-details">Interested Offer:</label>
+                        <textarea id="offer-details" name="offer-details" rows="4" placeholder="Write the offer you are interested in"></textarea>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </details>
             </div>
         </section>
     </main>
