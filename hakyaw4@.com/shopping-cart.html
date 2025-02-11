@@ -33,8 +33,9 @@
             </ul>
         </nav>
     </header>
-    <div class= "container">
-        <h1>Bean Bontique Shopping Cart</h1>
+
+    <div class="container">
+        <h1>Bean Boutique Shopping Cart</h1>
         <div class="cartmainrow">
             <div class="cartsecondrow">
                 <div class="cartcol1">
@@ -42,18 +43,18 @@
                     <div class="cartcol2">
                         <h3>Latte</h3>
                         <h4>Price: $10</h4>
-                        <p>Quantity: <input type="number" name="" value="1" min="1" max="5"></p>
+                        <p>Quantity: <input type="number" value="1" min="1" max="5"></p>
                         <a href="#">Remove</a>
                     </div>
                 </div>
 
                 <div class="cartcol1">
-                    <img src="images/espresso.jpg" alt="espresso">
+                    <img src="images/espresso.jpg" alt="Espresso">
                     <div class="cartcol2">
-                            <h3>Espresso</h3>
-                            <h4>Price: $15</h4>
-                           <p>Quantity: <input type="number" name="" value="1" min="1" max="5"></p>
-                           <a href="#">Remove</a>
+                        <h3>Espresso</h3>
+                        <h4>Price: $15</h4>
+                        <p>Quantity: <input type="number" value="1" min="1" max="5"></p>
+                        <a href="#">Remove</a>
                     </div>               
                 </div>
 
@@ -62,31 +63,34 @@
                     <div class="cartcol2">
                         <h3>Love</h3>
                         <h4>Price: $20</h4>
-                        <p>Quantity: <input type="number" name="" value="1" min="1" max="5"></p>
+                        <p>Quantity: <input type="number" value="1" min="1" max="5"></p>
                         <a href="#">Remove</a>
                     </div>
                 </div>
 
                 <div class="cartcol3">        
                     <h3>Payment Summary</h3>
-                    <p>
-                        <span>Subtotal:</span>
-                        <span>$45</span>
-                    </p>
+                    <p><span>Subtotal:</span> <span>$45</span></p>
                     <hr>
-                    <p>
-                        <span>Commercial Tax:</span>
-                        <span>$5</span>
-                            </p>
-                            <hr>  
-                    <p>
-                        <span>All Total:</span>
-                        <span>$50</span>
-                    </p>
+                    <p><span>Commercial Tax:</span> <span>$5</span></p>
+                    <hr>  
+                    <p><span>Total:</span> <span>$50</span></p>
                 
-                    <button class="btn">
-                        Checkout
-                    </button>
+                    <!-- Payment Section -->
+                    <fieldset>
+                        <legend>Payment Section</legend>
+                        <div class="payment-options">
+                            <label><input type="radio" name="rdoPaymentType" value="MPU" onclick="showPaymentTable()" checked> MPU</label>
+                            <label><input type="radio" name="rdoPaymentType" value="VISA" onclick="showPaymentTable()"> VISA</label>
+                            <label><input type="radio" name="rdoPaymentType" value="COD" onclick="hidePaymentTable()"> Cash on Delivery</label>
+                        </div>
+                        
+                        <div id="PaymentTable">
+                            <input type="number" name="txtsecuritycode" placeholder="Enter Security Code (e.g., 123)">
+                        </div>
+                    </fieldset>
+
+                    <button class="btn" onclick="successAlert()">Checkout</button>
                 </div>
             </div> 
         </div>  
@@ -95,5 +99,7 @@
     <footer>
         <p>&copy; 2024 Bean Boutique Coffee. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
