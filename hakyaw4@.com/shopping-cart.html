@@ -85,10 +85,12 @@
                             <label><input type="radio" name="rdoPaymentType" value="COD" onclick="hidePaymentTable()"> Cash on Delivery</label>
                         </div>
                         
+                        <!-- Payment details (Hidden by default) -->
                         <div id="PaymentTable">
-                            <input type="number" name="txtsecuritycode" placeholder="Enter Security Code (e.g., 123)">
+                            <input type="text" name="txtCardNumber" placeholder="Enter Card Number (e.g., 1234 5678 9012 3456)">
+                            <input type="number" name="txtSecurityCode" placeholder="Enter Security Code (e.g., 123)">
                         </div>
-                    </fieldset>
+                    </fieldset>                    
 
                     <button class="btn" onclick="successAlert()">Checkout</button>
                 </div>

@@ -1,16 +1,28 @@
 function showPaymentTable() {
-    document.getElementById('PaymentTable').style.display = "block";
+    document.getElementById("PaymentTable").style.display = "block";
 }
 
 function hidePaymentTable() {
-    document.getElementById('PaymentTable').style.display = "none";
+    document.getElementById("PaymentTable").style.display = "none";
 }
 
+// Success alert when clicking checkout
 function successAlert() {
     alert("Your order has been successfully placed!");
 }
 
-// Hide payment details by default if 'Cash on Delivery' is selected
+// Handle payment option selection
 document.addEventListener("DOMContentLoaded", function () {
-    hidePaymentTable();
+    hidePaymentTable(); // Hide payment table initially
+
+    const paymentOptions = document.querySelectorAll("input[name='rdoPaymentType']");
+    paymentOptions.forEach(option => {
+        option.addEventListener("change", function () {
+            if (this.value === "MPU" || this.value === "VISA") {
+                showPaymentTable();
+            } else {
+                hidePaymentTable();
+            }
+        });
+    });
 });
